@@ -1,0 +1,83 @@
+---
+title: "Math 3 Presentation"
+author: "Nehemias Ulloa"
+format: beamer
+---
+
+```{r setup, include=FALSE}
+#| label: setup
+library(tidyverse)
+library(MF)
+
+mlesion <- mlesions %>%
+  mutate(animalID = sample(1:1000, size=nrow(.), replace=FALSE)) %>%
+  mutate(animalID = factor(x=animalID, levels=animalID[order(les)]))
+```
+
+
+
+
+## About Me
+
+-   Nehemias Ulloa
+-   Bakersfield, CA
+![Bakersfield Map](Figures/Bakersfield_Map.jpg)
+
+
+## About Me
+
+-   Nehemias Ulloa
+-   Bakersfield, CA
+-   CSU Bakersfield - BS Math with Statistics Emphasis
+
+::: {layout-ncol=2}
+![Ariel View of CSUB](Figures/CSUB.jpg)
+
+![CSUB Roadrunner](Figures/Roadrunner.jpg)
+:::
+
+
+## About Me
+
+-   Nehemias Ulloa
+-   Bakersfield, CA
+-   CSU Bakersfield - BS Math with Statistics Emphasis
+-   Iowa State University - Ph.D. Statistics
+
+![Iowa State Campus](Figures/ISU.jpg)
+
+
+## About Me
+
+-   Nehemias Ulloa
+-   Bakersfield, CA
+-   CSU Bakersfield - BS Math with Statistics Emphasis
+-   Iowa State University - Ph.D. Statistics
+-   USDA - MRP - APHIS - VS - CVB (Center for Veterinary Biologics)
+
+{{< video https://www.youtube.com/watch?v=5lBG4fuJL4A >}}
+
+
+## What Do I Do
+-  License Biologics
+  - 
+
+
+
+##
+
+
+
+## Data Plot
+
+```{r}
+#| label: lesions_plot
+mlesion %>%
+  ggplot(aes(x=les, y=animalID, color=tx)) +
+    geom_point() + 
+    labs(x="Lung Lesion Score", y="AnimalID", color="Treatment") + 
+    scale_color_manual(values=c("black", "red")) +
+    theme_bw()
+```
+
+
