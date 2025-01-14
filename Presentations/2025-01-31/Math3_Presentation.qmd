@@ -101,13 +101,23 @@ mlesion %>%
 ```
 
 
-## Formal Analysis
+## Analysis
+::: {.fragment .fade-in}
+::: {.fragment .strike}
+Mean
+:::
+:::
+
+::: {.fragment .fade-in}
+::: {.fragment .strike}
+Median
+:::
+:::
 
 ::: {.incremental}
- - I estimate a Mitigated Fraction
- - MF is the relative increase in the probability that a vaccinate’s disease will be less severe than a nonvaccinate’s disease.
- - MF evaluates the intervention’s effect by the probability a subject will benefit from the intervention
- - 
+* Mitigated Fraction
+    + MF is the relative increase in the probability that a vaccinate’s disease will be less severe than a nonvaccinate’s disease.
+    + MF evaluates the intervention’s effect by the probability a subject will benefit from the intervention
 
 :::
 
