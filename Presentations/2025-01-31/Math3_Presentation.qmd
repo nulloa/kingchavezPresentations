@@ -59,16 +59,33 @@ mlesion <- mlesions %>%
 
 
 ## What Do I Do
+
+::: {.incremental}
 -  License Biologics
-  - 
+  - Regulate Vaccines
+  - Regulate Assays
+:::
 
 
-
-##
+## Example
 
 
 
 ## Data Plot
+
+```{r}
+#| label: lesions_boxplot
+mlesion %>%
+  ggplot(aes(y=les, x=tx, color=tx)) +
+    geom_boxplot() + 
+    geom_point() +
+    labs(y="Lung Lesion Score", color="Treatment", x="Treatment") + 
+    scale_color_manual(values=c("black", "red")) +
+    theme_bw()
+```
+
+
+## Data Plot 2
 
 ```{r}
 #| label: lesions_plot
@@ -79,5 +96,16 @@ mlesion %>%
     scale_color_manual(values=c("black", "red")) +
     theme_bw()
 ```
+
+
+## Formal Analysis
+
+::: {.incremental}
+ - I estimate a Mitigated Fraction
+ - MF evaluates the intervention’s effect by the probability a subject will benefit from the intervention
+ - 
+
+:::
+
 
 
