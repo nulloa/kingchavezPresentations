@@ -1,7 +1,7 @@
 ---
 title: "Math 3 Presentation"
 author: "Nehemias Ulloa"
-format: beamer
+format: revealjs
 ---
 
 ```{r setup, include=FALSE}
@@ -15,6 +15,9 @@ mlesion <- mlesions %>%
 ```
 
 
+## About Me
+
+-   Nehemias Ulloa
 
 
 ## About Me
