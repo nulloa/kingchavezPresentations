@@ -15,23 +15,18 @@ mlesion <- mlesions %>%
 ```
 
 
-## About Me
-
--   Nehemias Ulloa
-
 
 ## About Me
 
--   Nehemias Ulloa
--   Bakersfield, CA
++ Bakersfield, CA
+
 ![Bakersfield Map](Figures/Bakersfield_Map.jpg)
 
 
 ## About Me
 
--   Nehemias Ulloa
--   Bakersfield, CA
--   CSU Bakersfield - BS Math with Statistics Emphasis
++ Bakersfield, CA
++ CSU Bakersfield - BS Math with Statistics Emphasis
 
 ::: {layout-ncol=2}
 ![Ariel View of CSUB](Figures/CSUB.jpg)
@@ -42,39 +37,70 @@ mlesion <- mlesions %>%
 
 ## About Me
 
--   Nehemias Ulloa
--   Bakersfield, CA
--   CSU Bakersfield - BS Math with Statistics Emphasis
--   Iowa State University - Ph.D. Statistics
++ Bakersfield, CA
++ CSU Bakersfield - BS Math with Statistics Emphasis
++ Iowa State University - Ph.D. Statistics
 
 ![Iowa State Campus](Figures/ISU.jpg)
-
-
-## About Me
-
--   Nehemias Ulloa
--   Bakersfield, CA
--   CSU Bakersfield - BS Math with Statistics Emphasis
--   Iowa State University - Ph.D. Statistics
--   USDA - MRP - APHIS - VS - CVB (Center for Veterinary Biologics)
-
-{{< video https://www.youtube.com/watch?v=5lBG4fuJL4A >}}
 
 
 ## What Do I Do
 
 ::: {.incremental}
--  License Biologics
-  - Regulate Vaccines
-  - Regulate Assays
+* CVB (Center for Veterinary Biologics)
+  + USDA - MRP - APHIS - VS
+  + {{< video https://www.youtube.com/watch?v=5lBG4fuJL4A >}}
+  + License Biologics
+    - Regulate Vaccines
+    - Regulate Assays
 :::
+
+
+## Regulating Vaccines
+
+::: {.incremental}
+* Company wants to license vaccine
+  + e.g. Rabies Vaccine in Dogs
+  + Submit a plan
+  + Submit Multiple Studies
+    - Safety Study
+    - Shed/Spread Study
+    - Assay Validation
+    
+    ::: {.fragment .highlight-red}
+    - Efficacy Study
+    :::
+:::
+
 
 
 ## Example
 
+::: {.incremental}
+* Lung Lesions in Dogs
+* Different Elements of the Study?
+  + Control, Treatments Groups
+  + Randomization to Treatment
+  + Vaccinated/Challenged on Same Day
+  + Similar Housing/Living Conditions
+  + Same Breed Dogs
+  + Both Male and Female Dogs
+:::
 
+## Boxplot
 
-## Data Plot
+```{r}
+#| echo: true
+mlesion %>%
+  ggplot(aes(y=les, x=tx, color=tx)) +
+    geom_boxplot() + 
+    geom_point() +
+    labs(y="Lung Lesion Score", color="Treatment", x="Treatment") + 
+    scale_color_manual(values=c("black", "red")) +
+    theme_bw()
+```
+
+## Boxplot
 
 ```{r}
 #| label: lesions_boxplot
@@ -88,10 +114,22 @@ mlesion %>%
 ```
 
 
-## Data Plot 2
+## Dot Plot
 
 ```{r}
-#| label: lesions_plot
+#| echo: true
+mlesion %>%
+  ggplot(aes(x=les, y=animalID, color=tx)) +
+    geom_point() + 
+    labs(x="Lung Lesion Score", y="AnimalID", color="Treatment") + 
+    scale_color_manual(values=c("black", "red")) +
+    theme_bw()
+```
+
+## Dot Plot
+
+```{r}
+#| label: lesions_dotplot
 mlesion %>%
   ggplot(aes(x=les, y=animalID, color=tx)) +
     geom_point() + 
@@ -102,23 +140,82 @@ mlesion %>%
 
 
 ## Analysis
-::: {.fragment .fade-in}
-::: {.fragment .strike}
+
+::: {.r-stack}
+::: {.fragment .fade-in-then-out}
 Mean
+
+```{r, echo=T}
+mlesion %>%
+  group_by(tx) %>%
+  summarise(`Mean Lung Lesion Score` = mean(les))
+```
+:::
+
+::: {.fragment .fade-in-then-out}
+Standard Deviation
+  
+```{r, echo=T}
+mlesion %>%
+  group_by(tx) %>%
+  summarise(`Lung Lesion Score sd` = sd(les))
+```
+:::
+
+::: {.fragment .fade-in-then-out}
+Median
+  
+```{r, echo=T}
+mlesion %>%
+  group_by(tx) %>%
+  summarise(`Median Lung Lesion` = quantile(les, probs=0.5))
+```
 :::
 :::
 
-::: {.fragment .fade-in}
-::: {.fragment .strike}
-Median
-:::
-:::
+
+
+## Analysis
+
+```{r}
+#| label: lesions_distplot
+mlesion %>%
+  ggplot(aes(x=les, color=tx)) +
+    geom_density() + 
+    labs(x="Lung Lesion Score", color="Treatment") + 
+    scale_color_manual(values=c("black", "red")) +
+    theme_bw() +
+    facet_grid(~tx)
+```
+
+
+## Analysis
 
 ::: {.incremental}
-* Mitigated Fraction
-    + MF is the relative increase in the probability that a vaccinate’s disease will be less severe than a nonvaccinate’s disease.
-    + MF evaluates the intervention’s effect by the probability a subject will benefit from the intervention
 
+* Mitigated Fraction
+  + MF is the relative increase in the probability that a vaccinate’s disease will be less severe than a nonvaccinate’s disease.
+  + MF evaluates the intervention’s effect by the probability a subject will benefit from the intervention
+:::
+
+
+
+
+## Analysis
+
+What if we knew more information about the housing?
+
+::: {.fragment .fade-in}
+```{r}
+#| label: lesions_dotplot_cage
+mlesion %>%
+  ggplot(aes(x=les, y=animalID, color=tx)) +
+    geom_point() + 
+    labs(x="Lung Lesion Score", y="AnimalID", color="Treatment") + 
+    scale_color_manual(values=c("black", "red")) +
+    theme_bw() +
+    facet_wrap(~paste0("Cage: ", cage), scale="free_y")
+```
 :::
 
 

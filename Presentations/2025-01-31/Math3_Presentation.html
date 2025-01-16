@@ -29,6 +29,71 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="Math3_Presentation_files/libs/revealjs/dist/theme/quarto.css">
   <link href="Math3_Presentation_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -340,20 +405,13 @@ Nehemias Ulloa
 <section id="about-me" class="slide level2">
 <h2>About Me</h2>
 <ul>
-<li>Nehemias Ulloa</li>
+<li>Bakersfield, CA</li>
 </ul>
-</section>
+
+<img data-src="Figures/Bakersfield_Map.jpg" class="r-stretch quarto-figure-center"><p class="caption">Bakersfield Map</p></section>
 <section id="about-me-1" class="slide level2">
 <h2>About Me</h2>
 <ul>
-<li>Nehemias Ulloa</li>
-<li>Bakersfield, CA <img data-src="Figures/Bakersfield_Map.jpg" alt="Bakersfield Map"></li>
-</ul>
-</section>
-<section id="about-me-2" class="slide level2">
-<h2>About Me</h2>
-<ul>
-<li>Nehemias Ulloa</li>
 <li>Bakersfield, CA</li>
 <li>CSU Bakersfield - BS Math with Statistics Emphasis</li>
 </ul>
@@ -381,60 +439,161 @@ Nehemias Ulloa
 </div>
 </div>
 </section>
-<section id="about-me-3" class="slide level2">
+<section id="about-me-2" class="slide level2">
 <h2>About Me</h2>
 <ul>
-<li>Nehemias Ulloa</li>
 <li>Bakersfield, CA</li>
 <li>CSU Bakersfield - BS Math with Statistics Emphasis</li>
 <li>Iowa State University - Ph.D.&nbsp;Statistics</li>
 </ul>
 
 <img data-src="Figures/ISU.jpg" class="r-stretch quarto-figure-center"><p class="caption">Iowa State Campus</p></section>
-<section id="about-me-4" class="slide level2">
-<h2>About Me</h2>
-<ul>
-<li>Nehemias Ulloa</li>
-<li>Bakersfield, CA</li>
-<li>CSU Bakersfield - BS Math with Statistics Emphasis</li>
-<li>Iowa State University - Ph.D.&nbsp;Statistics</li>
-<li>USDA - MRP - APHIS - VS - CVB (Center for Veterinary Biologics)</li>
-</ul>
-<iframe data-external="1" src="https://www.youtube.com/embed/5lBG4fuJL4A" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-</section>
 <section id="what-do-i-do" class="slide level2">
 <h2>What Do I Do</h2>
 <div>
 <ul>
-<li class="fragment">License Biologics</li>
+<li class="fragment">CVB (Center for Veterinary Biologics)
+<ul>
+<li class="fragment">USDA - MRP - APHIS - VS</li>
+<li class="fragment"><iframe data-external="1" src="https://www.youtube.com/embed/5lBG4fuJL4A" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></li>
+<li class="fragment">License Biologics
+<ul>
 <li class="fragment">Regulate Vaccines</li>
 <li class="fragment">Regulate Assays</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="regulating-vaccines" class="slide level2">
+<h2>Regulating Vaccines</h2>
+<div>
+<ul>
+<li class="fragment">Company wants to license vaccine
+<ul>
+<li class="fragment">e.g.&nbsp;Rabies Vaccine in Dogs</li>
+<li class="fragment">Submit a plan</li>
+<li class="fragment">Submit Multiple Studies
+<ul>
+<li class="fragment">Safety Study</li>
+<li class="fragment">Shed/Spread Study</li>
+<li class="fragment">Assay Validation</li>
+</ul>
+<div class="fragment highlight-red">
+<ul>
+<li class="fragment">Efficacy Study</li>
+</ul>
+</div></li>
+</ul></li>
 </ul>
 </div>
 </section>
 <section id="example" class="slide level2">
 <h2>Example</h2>
+<div>
+<ul>
+<li class="fragment">Lung Lesions in Dogs</li>
+<li class="fragment">Different Elements of the Study?
+<ul>
+<li class="fragment">Control, Treatments Groups</li>
+<li class="fragment">Randomization to Treatment</li>
+<li class="fragment">Vaccinated/Challenged on Same Day</li>
+<li class="fragment">Similar Housing/Living Conditions</li>
+<li class="fragment">Same Breed Dogs</li>
+<li class="fragment">Both Male and Female Dogs</li>
+</ul></li>
+</ul>
+</div>
 </section>
-<section id="data-plot" class="slide level2">
-<h2>Data Plot</h2>
+<section id="boxplot" class="slide level2">
+<h2>Boxplot</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href=""></a>mlesion <span class="sc">%&gt;%</span></span>
+<span id="cb1-2"><a href=""></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">y=</span>les, <span class="at">x=</span>tx, <span class="at">color=</span>tx)) <span class="sc">+</span></span>
+<span id="cb1-3"><a href=""></a>    <span class="fu">geom_boxplot</span>() <span class="sc">+</span> </span>
+<span id="cb1-4"><a href=""></a>    <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb1-5"><a href=""></a>    <span class="fu">labs</span>(<span class="at">y=</span><span class="st">"Lung Lesion Score"</span>, <span class="at">color=</span><span class="st">"Treatment"</span>, <span class="at">x=</span><span class="st">"Treatment"</span>) <span class="sc">+</span> </span>
+<span id="cb1-6"><a href=""></a>    <span class="fu">scale_color_manual</span>(<span class="at">values=</span><span class="fu">c</span>(<span class="st">"black"</span>, <span class="st">"red"</span>)) <span class="sc">+</span></span>
+<span id="cb1-7"><a href=""></a>    <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="Math3_Presentation_files/figure-revealjs/unnamed-chunk-1-1.png" width="960" class="r-stretch"></section>
+<section id="boxplot-1" class="slide level2">
+<h2>Boxplot</h2>
 
 <img data-src="Math3_Presentation_files/figure-revealjs/lesions_boxplot-1.png" width="960" class="r-stretch"></section>
-<section id="data-plot-2" class="slide level2">
-<h2>Data Plot 2</h2>
+<section id="dot-plot" class="slide level2">
+<h2>Dot Plot</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href=""></a>mlesion <span class="sc">%&gt;%</span></span>
+<span id="cb2-2"><a href=""></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>les, <span class="at">y=</span>animalID, <span class="at">color=</span>tx)) <span class="sc">+</span></span>
+<span id="cb2-3"><a href=""></a>    <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
+<span id="cb2-4"><a href=""></a>    <span class="fu">labs</span>(<span class="at">x=</span><span class="st">"Lung Lesion Score"</span>, <span class="at">y=</span><span class="st">"AnimalID"</span>, <span class="at">color=</span><span class="st">"Treatment"</span>) <span class="sc">+</span> </span>
+<span id="cb2-5"><a href=""></a>    <span class="fu">scale_color_manual</span>(<span class="at">values=</span><span class="fu">c</span>(<span class="st">"black"</span>, <span class="st">"red"</span>)) <span class="sc">+</span></span>
+<span id="cb2-6"><a href=""></a>    <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
-<img data-src="Math3_Presentation_files/figure-revealjs/lesions_plot-1.png" width="960" class="r-stretch"></section>
+</div>
+<img data-src="Math3_Presentation_files/figure-revealjs/unnamed-chunk-3-1.png" width="960" class="r-stretch"></section>
+<section id="dot-plot-1" class="slide level2">
+<h2>Dot Plot</h2>
+
+<img data-src="Math3_Presentation_files/figure-revealjs/lesions_dotplot-1.png" width="960" class="r-stretch"></section>
 <section id="analysis" class="slide level2">
 <h2>Analysis</h2>
-<div class="fragment fade-in">
-<div class="fragment strike">
+<div class="r-stack">
+<div class="fragment fade-in-then-out">
 <p>Mean</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href=""></a>mlesion <span class="sc">%&gt;%</span></span>
+<span id="cb3-2"><a href=""></a>  <span class="fu">group_by</span>(tx) <span class="sc">%&gt;%</span></span>
+<span id="cb3-3"><a href=""></a>  <span class="fu">summarise</span>(<span class="st">`</span><span class="at">Mean Lung Lesion Score</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">mean</span>(les))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 2
+  tx    `Mean Lung Lesion Score`
+  &lt;fct&gt;                    &lt;dbl&gt;
+1 con                       8.08
+2 vac                       3.54</code></pre>
 </div>
 </div>
-<div class="fragment fade-in">
-<div class="fragment strike">
+</div>
+<div class="fragment fade-in-then-out">
+<p>Standard Deviation</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href=""></a>mlesion <span class="sc">%&gt;%</span></span>
+<span id="cb5-2"><a href=""></a>  <span class="fu">group_by</span>(tx) <span class="sc">%&gt;%</span></span>
+<span id="cb5-3"><a href=""></a>  <span class="fu">summarise</span>(<span class="st">`</span><span class="at">Lung Lesion Score sd</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">sd</span>(les))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 2
+  tx    `Lung Lesion Score sd`
+  &lt;fct&gt;                  &lt;dbl&gt;
+1 con                     8.79
+2 vac                     4.46</code></pre>
+</div>
+</div>
+</div>
+<div class="fragment fade-in-then-out">
 <p>Median</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href=""></a>mlesion <span class="sc">%&gt;%</span></span>
+<span id="cb7-2"><a href=""></a>  <span class="fu">group_by</span>(tx) <span class="sc">%&gt;%</span></span>
+<span id="cb7-3"><a href=""></a>  <span class="fu">summarise</span>(<span class="st">`</span><span class="at">Median Lung Lesion</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">quantile</span>(les, <span class="at">probs=</span><span class="fl">0.5</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 2
+  tx    `Median Lung Lesion`
+  &lt;fct&gt;                &lt;dbl&gt;
+1 con                   5   
+2 vac                   3.45</code></pre>
 </div>
 </div>
+</div>
+</div>
+</section>
+<section id="analysis-1" class="slide level2">
+<h2>Analysis</h2>
+
+<img data-src="Math3_Presentation_files/figure-revealjs/lesions_distplot-1.png" width="960" class="r-stretch"></section>
+<section id="analysis-2" class="slide level2">
+<h2>Analysis</h2>
 <div>
 <ul>
 <li class="fragment">Mitigated Fraction
@@ -443,6 +602,21 @@ Nehemias Ulloa
 <li class="fragment">MF evaluates the intervention’s effect by the probability a subject will benefit from the intervention</li>
 </ul></li>
 </ul>
+</div>
+</section>
+<section id="analysis-3" class="slide level2">
+<h2>Analysis</h2>
+<p>What if we knew more information about the housing?</p>
+<div class="fragment fade-in">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="Math3_Presentation_files/figure-revealjs/lesions_dotplot_cage-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
 </div>
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
