@@ -590,21 +590,46 @@ Nehemias Ulloa
 </section>
 <section id="analysis-1" class="slide level2">
 <h2>Analysis</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href=""></a>mlesion <span class="sc">%&gt;%</span></span>
+<span id="cb9-2"><a href=""></a>  <span class="fu">group_by</span>(tx) <span class="sc">%&gt;%</span></span>
+<span id="cb9-3"><a href=""></a>  <span class="fu">summarise</span>(<span class="st">`</span><span class="at">Mean Lung Lesion Score</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">mean</span>(les),</span>
+<span id="cb9-4"><a href=""></a>            <span class="st">`</span><span class="at">Lung Lesion Score sd</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">sd</span>(les),</span>
+<span id="cb9-5"><a href=""></a>            <span class="st">`</span><span class="at">Median Lung Lesion</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">quantile</span>(les, <span class="at">probs=</span><span class="fl">0.5</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb9-6"><a href=""></a>  <span class="fu">mutate</span>(<span class="fu">across</span>(<span class="fu">where</span>(is.numeric), round, <span class="dv">2</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 4
+  tx    `Mean Lung Lesion Score` `Lung Lesion Score sd` `Median Lung Lesion`
+  &lt;fct&gt;                    &lt;dbl&gt;                  &lt;dbl&gt;                &lt;dbl&gt;
+1 con                       8.08                   8.79                 5   
+2 vac                       3.54                   4.46                 3.45</code></pre>
+</div>
+</div>
+</section>
+<section id="analysis-2" class="slide level2">
+<h2>Analysis</h2>
 
 <img data-src="Math3_Presentation_files/figure-revealjs/lesions_distplot-1.png" width="960" class="r-stretch"></section>
-<section id="analysis-2" class="slide level2">
+<section id="analysis-3" class="slide level2">
 <h2>Analysis</h2>
 <div>
 <ul>
 <li class="fragment">Mitigated Fraction
 <ul>
-<li class="fragment">MF is the relative increase in the probability that a vaccinate’s disease will be less severe than a nonvaccinate’s disease.</li>
-<li class="fragment">MF evaluates the intervention’s effect by the probability a subject will benefit from the intervention</li>
+<li class="fragment"><p>MF is the relative increase in the probability that a vaccinate’s disease will be less severe than a nonvaccinate’s disease.</p></li>
+<li class="fragment"><p>MF evaluates the intervention’s effect by the probability a subject will benefit from the intervention</p></li>
+<li class="fragment"><p>Here’s the code</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href=""></a>MF<span class="sc">::</span><span class="fu">MFr</span>(les <span class="sc">~</span> tx, <span class="at">data=</span>mlesion)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.2011834</code></pre>
+</div>
+</div></li>
 </ul></li>
 </ul>
 </div>
 </section>
-<section id="analysis-3" class="slide level2">
+<section id="analysis-4" class="slide level2">
 <h2>Analysis</h2>
 <p>What if we knew more information about the housing?</p>
 <div class="fragment fade-in">
@@ -616,6 +641,18 @@ Nehemias Ulloa
 </figure>
 </div>
 </div>
+</div>
+</div>
+</section>
+<section id="analysis---matched-pairs" class="slide level2">
+<h2>Analysis - Matched Pairs</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href=""></a>MF<span class="sc">::</span><span class="fu">MFmp</span>(les <span class="sc">~</span> tx <span class="sc">+</span> <span class="fu">cluster</span>(cage), <span class="at">data=</span>mlesion)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>95% t intervals on 24 df
+ 
+    point     lower     upper 
+0.3846154 0.1316679 0.6375628 </code></pre>
 </div>
 </div>
 <div class="quarto-auto-generated-content">

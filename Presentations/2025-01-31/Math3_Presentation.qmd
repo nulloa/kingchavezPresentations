@@ -145,7 +145,8 @@ mlesion %>%
 ::: {.fragment .fade-in-then-out}
 Mean
 
-```{r, echo=T}
+```{r}
+#| echo: true
 mlesion %>%
   group_by(tx) %>%
   summarise(`Mean Lung Lesion Score` = mean(les))
@@ -155,7 +156,8 @@ mlesion %>%
 ::: {.fragment .fade-in-then-out}
 Standard Deviation
   
-```{r, echo=T}
+```{r}
+#| echo: true
 mlesion %>%
   group_by(tx) %>%
   summarise(`Lung Lesion Score sd` = sd(les))
@@ -165,7 +167,8 @@ mlesion %>%
 ::: {.fragment .fade-in-then-out}
 Median
   
-```{r, echo=T}
+```{r}
+#| echo: true
 mlesion %>%
   group_by(tx) %>%
   summarise(`Median Lung Lesion` = quantile(les, probs=0.5))
@@ -173,6 +176,19 @@ mlesion %>%
 :::
 :::
 
+
+
+## Analysis
+
+```{r}
+#| echo: true
+mlesion %>%
+  group_by(tx) %>%
+  summarise(`Mean Lung Lesion Score` = mean(les),
+            `Lung Lesion Score sd` = sd(les),
+            `Median Lung Lesion` = quantile(les, probs=0.5)) %>%
+  mutate(across(where(is.numeric), round, 2))
+```
 
 
 ## Analysis
@@ -196,6 +212,13 @@ mlesion %>%
 * Mitigated Fraction
   + MF is the relative increase in the probability that a vaccinate’s disease will be less severe than a nonvaccinate’s disease.
   + MF evaluates the intervention’s effect by the probability a subject will benefit from the intervention
+  + Here's the code
+  
+    ```{r}
+    #| echo: true
+    MF::MFr(les ~ tx, data=mlesion)
+    ```
+  
 :::
 
 
@@ -219,4 +242,13 @@ mlesion %>%
 :::
 
 
+## Analysis - Matched Pairs
 
+```{r}
+#| echo: true
+MF::MFmp(les ~ tx + cluster(cage), data=mlesion)
+```
+
+## Finally
+
+Questions?
