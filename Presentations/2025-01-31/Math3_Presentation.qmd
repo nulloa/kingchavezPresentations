@@ -1,5 +1,5 @@
 ---
-title: "Math 3 Presentation"
+title: "KCHS Math Presentation"
 author: "Nehemias Ulloa"
 format: revealjs
 ---
@@ -20,7 +20,7 @@ mlesion <- mlesions %>%
 
 + Bakersfield, CA
 
-![Bakersfield Map](Figures/Bakersfield_Map.jpg)
+![ ](Figures/Bakersfield_Map.jpg)
 
 
 ## About Me
@@ -29,7 +29,7 @@ mlesion <- mlesions %>%
 + CSU Bakersfield - BS Math with Statistics Emphasis
 
 ::: {layout-ncol=2}
-![Ariel View of CSUB](Figures/CSUB.jpg)
+![Ariel View of CSUB Campus](Figures/CSUB.jpg)
 
 ![CSUB Roadrunner](Figures/Roadrunner.jpg)
 :::
@@ -53,6 +53,7 @@ mlesion <- mlesions %>%
   + License Biologics
     - Regulate Vaccines
     - Regulate Assays
+    - Regulate Diagnostics
 :::
 
 
@@ -60,8 +61,8 @@ mlesion <- mlesions %>%
 
 ::: {.incremental}
 * Company wants to license vaccine
-  + e.g. Rabies Vaccine in Dogs
-  + Submit a plan
+  + e.g. Bordetella bronchiseptica Vaccine in Dogs
+  + Submit a Licensing Plan
   + Submit Multiple Studies
     - Safety Study
     - Shed/Spread Study
@@ -74,17 +75,28 @@ mlesion <- mlesions %>%
 
 
 
-## Example
+## Example - Lung Lesions in Dogs
 
 ::: {.incremental}
-* Lung Lesions in Dogs
-* Different Elements of the Study?
-  + Control, Treatments Groups
-  + Randomization to Treatment
+* Study Design
+
+  ::::{layout-ncol=2}
+  
+  + 2 Treatments Groups
+  + Randomization
+  + Blinding
+  
+  :::{#col2}
+  
   + Vaccinated/Challenged on Same Day
   + Similar Housing/Living Conditions
-  + Same Breed Dogs
+  + Same Breed
   + Both Male and Female Dogs
+  
+  :::
+  
+  ::::
+  
 :::
 
 ## Boxplot
