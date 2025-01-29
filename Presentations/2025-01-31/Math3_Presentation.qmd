@@ -1,7 +1,10 @@
 ---
 title: "KCHS Math Presentation"
 author: "Nehemias Ulloa"
-format: revealjs
+format: 
+  revealjs:
+    embed-resources: true
+    self-contained-math: true
 ---
 
 ```{r setup, include=FALSE}
