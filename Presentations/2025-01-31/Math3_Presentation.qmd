@@ -41,10 +41,13 @@ mlesion <- mlesions %>%
 ## About Me
 
 + Bakersfield, CA
+
+::: {.incremental}
 + CSU Bakersfield - B.S. Math with Statistics Emphasis
     - Summer REU (Research Experience for Undergraduates) - UMBC
     - C.R.E.S.T. (Center for Climate Science and Natural Resource Solutions)
     - Math Tutoring Center
+:::
 
 
 ## About Me
@@ -60,12 +63,14 @@ mlesion <- mlesions %>%
 
 + Bakersfield, CA
 + CSU Bakersfield - BS Math with Statistics Emphasis
+
+::: {.incremental}
 + Iowa State University - Ph.D. Statistics
   - AGEP - Alliance for Graduate Education and the Professoriate Fellowship
   - After, Inc. Internship
   - Iowa Monarch Conservation Consortium
   - StatCom
-
+:::
 
 ## What Have I Done With Statistics
 
