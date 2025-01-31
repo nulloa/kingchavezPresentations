@@ -72,7 +72,7 @@ mlesion <- mlesions %>%
 ::: {.incremental}
 + CVB (Center for Veterinary Biologics)
   - USDA - MRP - APHIS - VS
-  - DoE (Disgn of Experiments)
+  - DoE (Design of Experiments)
 + After, Inc.
   - Shiny Developer
 + Seasonal Disease Prediction
@@ -84,6 +84,25 @@ mlesion <- mlesions %>%
   
 :::
 
+
+## What Else Can Be Done?
+
+::: {.incremental}
++ Literally Anything
++ DoE - Design of Experiments
+  - Study Design
+  - Summary Statistics
+  - Hypothesis Testing
+  
++ Sports Analytics - All Sports
+  - Summary Statistics
+  - Spatial Statistics
+  - Sabermetrics
+  
++ Tech Industry
+  - AB Testing
+  - Really Simple Problems with LOTS of Data
+:::
 
 
 
