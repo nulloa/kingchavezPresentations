@@ -61,8 +61,10 @@ mlesion <- mlesions %>%
 + Bakersfield, CA
 + CSU Bakersfield - BS Math with Statistics Emphasis
 + Iowa State University - Ph.D. Statistics
-  - LSAMP - Louis Stokes Alliance for Minority Participation
+  - AGEP - Alliance for Graduate Education and the Professoriate Fellowship
   - After, Inc. Internship
+  - Iowa Monarch Conservation Consortium
+  - StatCom
 
 
 ## What Have I Done With Statistics
@@ -73,6 +75,13 @@ mlesion <- mlesions %>%
   - DoE (Disgn of Experiments)
 + After, Inc.
   - Shiny Developer
++ Seasonal Disease Prediction
+  - Bayesian Statistics in functional statical prediction
++ Relationship Quality Estimation
+  - Polynomial Regression
++ Iowa Monarch Conservation Consortium
+  - Numerical Summaries and figures
+  
 :::
 
 
