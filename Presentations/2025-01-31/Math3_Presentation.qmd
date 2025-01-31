@@ -89,7 +89,7 @@ mlesion <- mlesions %>%
 
 ::: {.incremental}
 + Relationship Quality Estimation
-  - Polynomial Regression
+  - Polynomial Regression with Dyadic Data
 + Iowa Monarch Conservation Consortium
   - Numerical Summaries and figures
   
