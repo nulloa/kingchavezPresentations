@@ -75,12 +75,19 @@ mlesion <- mlesions %>%
 ## What Have I Done With Statistics
 
 ::: {.incremental}
-+ USDA - MRP - APHIS - VS- CVB (Center for Veterinary Biologics)
++ USDA - MRP - APHIS - VS - CVB (Center for Veterinary Biologics)
   - DoE (Design of Experiments)
 + After, Inc.
   - Shiny Developer
 + Seasonal Disease Prediction
-  - Bayesian Statistics in functional statical prediction
+  - Bayesian Statistics in Functional Form Prediction
+  
+:::  
+  
+  
+## What Have I Done With Statistics
+
+::: {.incremental}
 + Relationship Quality Estimation
   - Polynomial Regression
 + Iowa Monarch Conservation Consortium
@@ -102,6 +109,7 @@ mlesion <- mlesions %>%
   - Summary Statistics
   - Spatial Statistics
   - Sabermetrics
+  
 :::
 
 
@@ -111,13 +119,15 @@ mlesion <- mlesions %>%
 + Tech Industry
   - AB Testing
   - Really Simple Problems with LOTS of Data
+  - MAchine Learning/AI
   
 + Statistical Graphics
   - What is the best way to present this data?
-  - Case Study - Shiny App
-    *[Google Sheet](https://docs.google.com/spreadsheets/d/14DQFoUMEDOaiDwJbfivyRSpJ2rijGwO-wHohUgCWDIk/edit?usp=sharing)
+    * Figures
+    * Tables
+    * Interactive
+    * Colors
     
-  
 :::
 
 
