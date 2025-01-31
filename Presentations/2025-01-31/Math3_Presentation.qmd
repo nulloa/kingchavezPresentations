@@ -29,7 +29,7 @@ mlesion <- mlesions %>%
 ## About Me
 
 + Bakersfield, CA
-+ CSU Bakersfield - BS Math with Statistics Emphasis
++ CSU Bakersfield - B.S. Math with Statistics Emphasis
 
 ::: {layout-ncol=2}
 ![Ariel View of CSUB Campus](Figures/CSUB.jpg)
