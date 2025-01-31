@@ -41,6 +41,15 @@ mlesion <- mlesions %>%
 ## About Me
 
 + Bakersfield, CA
++ CSU Bakersfield - B.S. Math with Statistics Emphasis
+    - Summer REU (Research Experience for Undergraduates) - UMBC
+    - C.R.E.S.T. (Center for Climate Science and Natural Resource Solutions)
+    - Math Tutoring Center
+
+
+## About Me
+
++ Bakersfield, CA
 + CSU Bakersfield - BS Math with Statistics Emphasis
 + Iowa State University - Ph.D. Statistics
 
