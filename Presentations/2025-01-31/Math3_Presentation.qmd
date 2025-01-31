@@ -105,6 +105,30 @@ mlesion <- mlesions %>%
 :::
 
 
+## What Else Can Be Done?
+
+::: {.incremental}
++ Statistical Graphics
+  - What is the best way to present this data?
+  - Case Study - Shiny App
+    *[Google Sheet](https://docs.google.com/spreadsheets/d/14DQFoUMEDOaiDwJbfivyRSpJ2rijGwO-wHohUgCWDIk/edit?usp=sharing)
+    *![ ](Figures/GoogleSheetScreenshot.png)
+  
+:::
+
+
+## What Else Can Be Done?
+
+::: {.incremental}
++ Statistical Graphics
+  - What is the best way to present this data?
+  - Case Study - Shiny App
+    *[Google Sheet](https://docs.google.com/spreadsheets/d/14DQFoUMEDOaiDwJbfivyRSpJ2rijGwO-wHohUgCWDIk/edit?usp=sharing)
+    *[Shiny App Code](https://github.com/nulloa/fortnitefridayShiny)
+    *[Shiny App](https://nehemiasulloa.shinyapps.io/fortnitefridayShiny/)
+  
+:::
+
 
 ## Finally
 
