@@ -79,7 +79,7 @@ mlesion <- mlesions %>%
   - DoE (Design of Experiments)
 + After, Inc.
   - Shiny Developer
-+ Seasonal Disease Prediction
++ Disease Outbreak Prediction
   - Bayesian Statistics in Functional Form Prediction
   
 :::  
