@@ -56,16 +56,23 @@ mlesion <- mlesions %>%
 ![Iowa State Campus](Figures/ISU.jpg)
 
 
-## What Do I Do
+## About Me
+
++ Bakersfield, CA
++ CSU Bakersfield - BS Math with Statistics Emphasis
++ Iowa State University - Ph.D. Statistics
+  - LSAMP - Louis Stokes Alliance for Minority Participation
+  - After, Inc. Internship
+
+
+## What Have I Done With Statistics
 
 ::: {.incremental}
-* CVB (Center for Veterinary Biologics)
-  + USDA - MRP - APHIS - VS
-  + {{< video https://www.youtube.com/watch?v=5lBG4fuJL4A >}}
-  + License Biologics
-    - Regulate Vaccines
-    - Regulate Assays
-    - Regulate Diagnostics
++ CVB (Center for Veterinary Biologics)
+  - USDA - MRP - APHIS - VS
+  - DoE (Disgn of Experiments)
++ After, Inc.
+  - Shiny Developer
 :::
 
 
